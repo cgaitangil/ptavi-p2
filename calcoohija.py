@@ -1,4 +1,4 @@
-#! /usr/bin/oython3
+#! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import sys
@@ -25,15 +25,15 @@ if __name__ == '__main__':
     except ValueError:
         sys.exit('Non numerical parameters')
      
-    if sys.argv[2] == 'division':
+    if sys.argv[2] == 'divide':
         resultado = calcoohija.div(operando1, operando2)
-    elif sys.argv[2] == 'multiplicacion':
+    elif sys.argv[2] == 'multiplica':
         resultado = calcoohija.mul(operando1, operando2)
     elif sys.argv[2] == 'suma':
         resultado =  calcoohija.plus(operando1, operando2)
     elif sys.argv[2] == 'resta':
         resultado = calcoohija.minus(operando1, operando2)
     else:
-        sys.exit('Operación sólo puede ser suma, resta, multiplicación o división')
+        sys.exit('Operación sólo puede ser suma, resta, multiplica o divide')
         
     print(resultado)
