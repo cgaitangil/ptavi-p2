@@ -5,24 +5,24 @@ import sys
 
 class Calculadora :
 
-    def minus(op1, op2):
+    def minus(self, op1, op2):
         return op1 - op2
     
-    def plus(op1, op2):
+    def plus(self, op1, op2):
         return op1 + op2
         
-    def div(op1, op2):
+    def div(self, op1, op2):
         if op2 == 0:
             return ('No se puede dividir por 0')
         else:
             return op1 / op2
         
-    def mul(op1, op2):
+    def mul(self, op1, op2):
         return op1 * op2
         
 if __name__ == '__main__':
 
-    calcoo = Calculadora
+    calcoo = Calculadora()
     try:    
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])    
@@ -41,7 +41,7 @@ if __name__ == '__main__':
         sys.exit('Operación sólo puede ser suma, resta, multiplicación o división')
                     
         
-    print(resultado)        
+    print('Resultado = ' + str(resultado))        
 
 
   
