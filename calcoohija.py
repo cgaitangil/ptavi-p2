@@ -6,20 +6,20 @@ import calcoo
 
 class CalculadoraHija(calcoo.Calculadora) :
 
-    def div(op1, op2):
+    def div(self, op1, op2):
         if op2 == 0:
             return ('Division by zero is not allowed')
         else:
             return op1 / op2
 
-    def mul(op1, op2):
+    def mul(self, op1, op2):
         return op1 * op2
 
 if __name__ == '__main__':
     
-    calcoohija = CalculadoraHija
-    
-    try:
+    calcoohija = CalculadoraHija() #Contiene los self de manera estricta
+                                   #ya que es una variable
+    try:                           #sin () seria puntero
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
@@ -36,4 +36,4 @@ if __name__ == '__main__':
     else:
         sys.exit('Operación sólo puede ser suma, resta, multiplica o divide')
         
-    print(resultado)
+    print('Resultado = ' + str(resultado))
